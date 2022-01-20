@@ -1,0 +1,20 @@
+[package]
+name        = "jnsm"
+version     = "0.1.0"
+authors     = ["uid2 <uid2@uid2.com>"]
+description = "JNI attestation interface for AWS Nitro"
+repository  = ""
+license     = "MIT"
+edition     = "2018"
+
+[dependencies]
+aws-nitro-enclaves-cose = "0.1"
+nsm-driver  = { git = "https://github.com/aws/aws-nitro-enclaves-nsm-api.git", branch = "main" }
+nsm-io      = { git = "https://github.com/aws/aws-nitro-enclaves-nsm-api.git", branch = "main" }
+jni         = "0.19.0"
+bincode     = "1.3.2"
+serde_bytes = "0.11"
+thiserror   = "1.0"
+
+[lib]
+crate-type = ["cdylib"]
